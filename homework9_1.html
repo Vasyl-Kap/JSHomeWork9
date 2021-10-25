@@ -5,8 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JsCoreHW9_1</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: silver;
+        }
+        .center {
+            background-color: snow;
+        }
+        .top, .center, .bottom {
+            height: 700px;
+        }
+        .top {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .top_text {
+            position: absolute;
+            bottom: 250px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+    <div class="top">
+        <p class="top_text">Scroll down</p>
+    </div>
+    <div class="center">
+        <div class="center_top">
+            <p class="center_top_text">"Slide from left"</p>
+            <hr>
+        </div>
+        <div class="center_bottom">
+            <div class="center_bottom_image"></div>
+        </div>
+    </div>
+    <div class="bottom">
+        <p class="bottom_text">Scroll up</p>
+    </div>
 
 
     <script src="script1.js"></script>
