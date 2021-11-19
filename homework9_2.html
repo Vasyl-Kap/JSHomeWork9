@@ -5,10 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JsCoreHW9_2</title>
+    <style>
+        body {
+            background-color: bisque;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .notepad {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .notepad_done, .notepad_new {
+            background-color: rgb(248, 240, 229);
+            width: 400px;
+            height: 580px;
+            box-shadow: 2px 4px 6px gray;
+            margin: 0 10px;
+            padding: 10px 40px;
+            border-radius: 5px;
+        }
+        .notepad_new {
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            color: darkred;
+            margin-bottom: 30px;
+        }
+        .input {
+            border: none;
+            border-bottom: 2px solid black;
+            background-color: rgb(248, 240, 229);
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+        }
+        .input:focus-visible {
+            outline: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+        }
+        .btn {
+            margin-top: 20px;
+            color:rgb(248, 240, 229);
+            background-color: rgb(61, 61, 61);
+            width: 85px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid rgb(73, 73, 73);
+            font-size: 17px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: rgb(34, 34, 34);
+        }
+        .btn:active {
+            box-shadow: 0px 0px 2px 2px rgb(90, 90, 90);
+            outline: none;
+        }
+        /* .check {
+            display: flex;
+            flex-direction: column;
+        } */
+        /* .checkbox {
+            display: list-item;
+        } */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="notepad">
+        <div class="notepad_done">
+            <h1>Список завдань</h1>
+            <form name="f1" class="check">
+                <ul id="myUL">
+                    <li>
+                        <input class="checkbox" type="checkbox">HTML5
+                    </li>
+                    <li>
+                        <input class="checkbox" type="checkbox">CSS3
+                    </li>
+                    <li>
+                        <input class="checkbox" type="checkbox">SASS/SCSS
+                    </li>
+                    <li>
+                        <input class="checkbox" type="checkbox">Bootstrap
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="notepad_new">
+            <h1>Додати нове завдання</h1>
+            <form name="f2">
+                <input class="input" type="text">
+                <br>
+                <input class="btn" type="button" value="додати">
+            </form>
+        </div>
+    </div>
 
     <script src="script2.js"></script>
 </body>
 </html>
+                

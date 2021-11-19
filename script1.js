@@ -1,47 +1,19 @@
-// #1
-
-// window.addEventListener('scroll', () => {
-//     console.log(event);
-//     console.log(window.scrollY);
-//     if (window.scrollY <= 100 && window.scrollY >= 0) {
-//         document.querySelector('.top_text').style.fontSize = '26px';
-//     }
-//     else if (window.scrollY > 100 && window.scrollY <= 200) {
-//         document.querySelector('.top_text').style.fontSize = '27px';
-//     }
-//     else if (window.scrollY > 200 && window.scrollY <= 300) {
-//         document.querySelector('.top_text').style.fontSize = '28px';
-//     }
-//     else if (window.scrollY > 300 && window.scrollY <= 400) {
-//         document.querySelector('.top_text').style.fontSize = '29px';
-//     }
-// })
-
-window.addEventListener('scroll', updateDivFontSize);
-
-function updateDivFontSize() {
-    var text = document.querySelector('.top_text'),
-        divScrollCoef = getScrollCoef(text);
-
-    text.style.fontSize = divScrollCoef * 9 + 1 + 'vw';
-}
-
-function getScrollCoef(element) {
-    var elementRect = element.getBoundingClientRect(),
-        elementOffsetTop = elementRect.top,
-        elementOffsetBottom = elementRect.bottom,
-        windowOffsetBottom = document.documentElement.clientHeight,
-        coef;
-
-    if (windowOffsetBottom < elementOffsetTop) {
-        coef = 0;
-    } else if (windowOffsetBottom > elementOffsetBottom) {
-        coef = 1;
-    } else {
-        coef = (windowOffsetBottom - elementOffsetTop) / (elementOffsetBottom - elementOffsetTop);
-    }
-
-    return coef;
-}
-
-// #2
+window.addEventListener('scroll', function(){
+  console.log(window.scrollY);
+  if (window.scrollY <= 300) {
+    let tdiv = document.querySelector('.top_text');
+    tdiv.style.fontSize = `${(window.scrollY / 10)  + 27}px`;  
+  }
+  else if (window.scrollY >= 301 && window.scrollY <= 620) {
+    let hr = document.querySelector('.center_top');
+    hr.style.width = `${window.scrollY / 1.5}px`;
+  }
+  else if (window.scrollY >= 621 && window.scrollY <= 839) {
+    let jpg = document.querySelector('.center_bottom');
+    jpg.style.right = `${(window.scrollY / 3) - 142}px`;
+  }
+  else if (window.scrollY >= 840) {
+    let bdiv = document.querySelector('.bottom_text');
+    bdiv.style.fontSize = `${141 - (window.scrollY / 10)}px`;
+  }
+});

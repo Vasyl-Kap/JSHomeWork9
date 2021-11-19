@@ -14,7 +14,7 @@
             background-color: snow;
         }
         .top, .center, .bottom {
-            height: 700px;
+            height: 650px;
         }
         .top {
             display: flex;
@@ -22,20 +22,72 @@
             position: relative;
         }
         .top_text {
+            cursor: pointer;
             position: absolute;
-            bottom: 250px;
-            font-size: 10vw;
+            bottom: 170px;
             font-weight: bold;
+            font-size: 27px;
+        }
+        /* .t_text {
+            font-size: 100%;
+            font-weight: bold;
+        } */
+        .center {
+            height: 500px;
+            padding: 80px 65px;
+            position: relative;
+        }
+        hr {
+            border: 2px solid rgb(202, 0, 0);
+        }
+        .center_top {
+            width: 200px;
+        }
+        .center_top_text {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .center_bottom {
+            width: 600px;
+            position: absolute;
+            bottom: 80px;
+            right: 65px;
+        }
+        .center_bottom_image {
+            height: 300px;
+            width: 600px;
+            background-image: url('https://www.maketecheasier.com/assets/uploads/2020/02/mac-keyboard-feature.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .bottom {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .bottom_text {
+            
+            position: absolute;
+            top: 170px;
+            font-weight: bold;
+            font-size: 54px;
+            cursor: pointer;
+        }
+        .bottom_text:hover, .top_text:hover {
+            color: rgb(187, 72, 72);
         }
     </style>
 </head>
 <body>
     <div class="top">
-        <p class="top_text">Scroll down</p>
+        <div class="top_text">
+            Scroll down
+        </div>
     </div>
     <div class="center">
         <div class="center_top">
-            <p class="center_top_text">"Slide from left"</p>
+            <div class="center_top_text">"Slide from left"</div>
             <hr>
         </div>
         <div class="center_bottom">
@@ -43,7 +95,7 @@
         </div>
     </div>
     <div class="bottom">
-        <p class="bottom_text">Scroll up</p>
+        <div class="bottom_text">Scroll up</div>
     </div>
 
 
